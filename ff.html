@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интерактивная страница</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #000000, #00008b, #000000);
+background-size: 200% 200%;
+animation: gradientAnimation 10s ease infinite;
+font-family: Arial, sans-serif;
+}
+@keyframes gradientAnimation {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+.action-button {
+background-color: #28a745;
+color: white;
+padding: 20px 40px;
+font-size: 24px;
+font-weight: bold;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+transition: transform 0.2s, background-color 0.2s;
+}
+.action-button:hover {
+background-color: #218838;
+transform: scale(1.05);
+}
+.action-button:active {
+transform: scale(0.98);
+}
+</style>
+</head>
+<body>
+<button class="action-button" onclick="openPhoto()">Нажми сюда</button>
+<script>
+function openPhoto() {
+// Замените URL ниже на ссылку на вашу фотографию
+const photoUrl = 'https://i.ytimg.com/vi/YBJjt3_9g80/maxresdefault.jpg';
+window.open(photoUrl, '_blank');
+}
+</script>
+</body>
+</html>
